@@ -1,10 +1,8 @@
 import urllib2
 from BeautifulSoup import BeautifulSoup,BeautifulStoneSoup
-import re
 
 soup = BeautifulSoup(urllib2.urlopen('http://www.icheckmovies.com/list/top+100+spiritually+significant+films/').read(),convertEntities=BeautifulStoneSoup.HTML_ENTITIES)
 
-#lista = soup.findAll('a',href=re.compile(r'movie'),text=True)
 lista = soup.findAll('a')
 #print(lista)
 #print(len(lista))
